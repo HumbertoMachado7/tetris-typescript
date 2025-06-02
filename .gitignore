@@ -1,0 +1,45 @@
+# Dependencias // Dependencies
+node_modules/
+
+# Archivos de construcción y salida // Build and output files
+dist/
+.parcel-cache/ # Si en algún momento usaras Parcel // If Parcel is ever used
+build/ # Otra carpeta común de construcción // Another common build folder
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Archivos de entorno local // Local environment files
+.env
+.env.local
+.env.*.local
+
+# Archivos de configuración de IDEs // IDE configuration files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Archivos del sistema operativo // Operating system files
+.DS_Store
+Thumbs.db
+
+# Archivos de caché de TypeScript // TypeScript cache files
+*.tsbuildinfo
+
+# Reportes de cobertura // Coverage reports
+coverage/
+.nyc_output/
