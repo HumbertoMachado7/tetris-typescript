@@ -1,30 +1,28 @@
 {
-  "name": "tetris-typescript", // o el nombre de tu proyecto
+  "name": "tetris-typescript",
   "private": true,
   "version": "0.0.0",
-  "type": "module", // Asegúrate de que esto esté si usas import/export de ES Modules
+  "type": "module",
   "scripts": {
-    "dev": "vite",                     // <--- Para iniciar el servidor de desarrollo
-    "build": "tsc && vite build",      // <--- Para compilar para producción
-    "preview": "vite preview",         // <--- Para previsualizar la build de producción localmente
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0" // Opcional, si usas ESLint
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-    // ...otras dependencias que tu proyecto necesite...
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0", // Opcional
-    "@typescript-eslint/parser": "^6.0.0",      // Opcional
-    "@vitejs/plugin-react": "^4.0.3",        // <--- El plugin de React
-    "eslint": "^8.45.0",                       // Opcional
-    "eslint-plugin-react-hooks": "^4.6.0",     // Opcional
-    "eslint-plugin-react-refresh": "^0.4.3",   // Opcional
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"                           // <--- Vite mismo
-    // ...otras dependencias de desarrollo...
+    "vite": "^4.4.5"
   }
 }
