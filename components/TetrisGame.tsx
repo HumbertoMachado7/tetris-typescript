@@ -5,7 +5,7 @@ import NextPiecePreview from './NextPiecePreview';
 import ScoreDisplay from './ScoreDisplay';
 import GameControls from './GameControls';
 import GameOverModal from './GameOverModal';
-import { BoardShape, Piece, TetrominoType, CellValue } from '../types';
+import { BoardShape, Piece, CellValue } from '../types';
 import {
   BOARD_WIDTH,
   BOARD_HEIGHT,
