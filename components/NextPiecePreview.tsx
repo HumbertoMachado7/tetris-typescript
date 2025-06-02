@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Piece } from '../types';
 import { Cell } from './Cell';

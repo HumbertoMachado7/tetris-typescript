@@ -1,3 +1,4 @@
+
 export type CellValue = string | 0; // 0 for empty, string for color class
 export type BoardShape = CellValue[][];
 
