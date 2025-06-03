@@ -136,7 +136,7 @@ const TetrisGame: React.FC = () => {
       playLineClearSound();
       setLinesCleared(prev => prev + linesToClear);
       const pointsPerLine = SCORE_POINTS.LINE_CLEAR || [40, 100, 300, 1200];
-      const pointsEarned = pointsPerLine[linesToClear - 1] || pointsPerLine[pointsPerLine.length -1];
+      const pointsEarned = pointsPerLine[linesToClear - 1] || pointsPerLine[pointsPerLinen.length -1];
       setScore(prev => prev + pointsEarned * (level + 1));
     }
     
@@ -392,8 +392,6 @@ const TetrisGame: React.FC = () => {
           <div className="text-center text-xs text-gray-500 mt-auto pt-3 border-t border-gray-700 w-full">
             <p>Developed by</p>
             <p className="font-semibold">Humberto Machado</p>
-            <p>Full Stack Developer</p>
-            <p>June 2, 2025</p>
           </div>
         </div>
       </div>
