@@ -357,16 +357,19 @@ const TetrisGame: React.FC = () => {
   };
 
   return (
+    // Este div ya no necesita min-h-screen si App.tsx (o #root) lo maneja
+    // Le damos un fondo específico para el área del juego y padding.
     <div 
       ref={gameContainerRef} 
       tabIndex={0} 
-      className="relative outline-none flex flex-col items-center justify-start pt-2 pb-4 px-2 sm:px-4 min-h-screen bg-gray-950 text-white select-none"
+      className="relative outline-none flex flex-col items-center bg-gray-900 p-4 rounded-xl shadow-2xl select-none w-auto" // w-auto para que se ajuste al contenido
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* EL H1 FUE ELIMINADO DE AQUÍ */}
-      <div className="flex flex-col md:flex-row items-start justify-center gap-4 md:gap-6 w-full max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl mt-4 md:mt-0"> {/* Añadido margen superior para compensar título en App.tsx */}
+      {/* El título principal ahora está en App.tsx */}
+      
+      <div className="flex flex-col md:flex-row items-start justify-center gap-4 md:gap-6 w-full"> {/* Eliminado max-w para que el padre (App) controle el centrado y ancho */}
         
         <div className="flex-shrink-0 mx-auto md:mx-0"> 
           <Board board={displayBoard()} />
