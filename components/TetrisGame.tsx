@@ -360,7 +360,7 @@ const TetrisGame: React.FC = () => {
     <div 
       ref={gameContainerRef} 
       tabIndex={0} 
-      className="relative outline-none flex flex-col items-center justify-start pt-2 pb-4 px-2 sm:px-4 min-h-screen bg-gray-950 text-white select-none"
+      className="relative outline-none flex flex-col items-center pt-2 pb-4 px-2 sm:px-4 text-white select-none"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
