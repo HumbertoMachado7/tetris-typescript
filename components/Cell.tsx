@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CellValue } from '../types';
 
@@ -7,8 +6,14 @@ interface CellProps {
 }
 
 const CellComponent: React.FC<CellProps> = ({ type }) => {
-  const color = type === 0 ? 'bg-gray-800' : type;
-  return <div className={`w-full h-full border border-gray-700 ${color}`}></div>;
+  const cellStyle: React.CSSProperties = {
+    width: '100%',
+    aspectRatio: '1 / 1',
+    backgroundColor: type === 0 ? '#1f2937' : type,
+    border: '1px solid #374151',
+  };
+
+  return <div style={cellStyle} />;
 };
 
 export const Cell = React.memo(CellComponent);

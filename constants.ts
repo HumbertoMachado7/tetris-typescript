@@ -1,46 +1,44 @@
-
-import { Shapes, TetrominoType } from './types';
-
 export const BOARD_WIDTH = 10;
 export const BOARD_HEIGHT = 20;
 
-export const TETROMINOES: Shapes = {
-  '0': { shape: [[0]], color: 'bg-transparent' }, // Represents an empty cell or no piece
-  'I': {
-    shape: [[1, 1, 1, 1]],
-    color: 'bg-cyan-400',
+export const TETROMINO_TYPES = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'] as const;
+
+export type TetrominoKey = typeof TETROMINO_TYPES[number];
+
+export const TETROMINOES: Record<TetrominoKey, { shape: number[][]; color: string }> = {
+  I: {
+    shape: [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],
+    color: 'cyan',
   },
-  'J': {
-    shape: [[1, 0, 0], [1, 1, 1]],
-    color: 'bg-blue-500',
+  J: {
+    shape: [[2, 0, 0], [2, 2, 2], [0, 0, 0]],
+    color: 'blue',
   },
-  'L': {
-    shape: [[0, 0, 1], [1, 1, 1]],
-    color: 'bg-orange-500',
+  L: {
+    shape: [[0, 0, 3], [3, 3, 3], [0, 0, 0]],
+    color: 'orange',
   },
-  'O': {
-    shape: [[1, 1], [1, 1]],
-    color: 'bg-yellow-400',
+  O: {
+    shape: [[4, 4], [4, 4]],
+    color: 'yellow',
   },
-  'S': {
-    shape: [[0, 1, 1], [1, 1, 0]],
-    color: 'bg-green-500',
+  S: {
+    shape: [[0, 5, 5], [5, 5, 0], [0, 0, 0]],
+    color: 'green',
   },
-  'T': {
-    shape: [[0, 1, 0], [1, 1, 1]],
-    color: 'bg-purple-500',
+  T: {
+    shape: [[0, 6, 0], [6, 6, 6], [0, 0, 0]],
+    color: 'purple',
   },
-  'Z': {
-    shape: [[1, 1, 0], [0, 1, 1]],
-    color: 'bg-red-500',
+  Z: {
+    shape: [[7, 7, 0], [0, 7, 7], [0, 0, 0]],
+    color: 'red',
   },
 };
 
-export const TETROMINO_TYPES: TetrominoType[] = ['I', 'J', 'L', 'O', 'S', 'T', 'Z'];
-
-export const INITIAL_SPEED = 1000; // ms
-export const SPEED_DECREMENT = 50; // ms per level
-export const MIN_SPEED = 100; // ms
+export const INITIAL_SPEED = 1000; 
+export const SPEED_DECREMENT = 75; 
+export const MIN_SPEED = 100; 
 export const LINES_PER_LEVEL = 10;
 
 export const SCORE_POINTS = {
@@ -48,4 +46,7 @@ export const SCORE_POINTS = {
   DOUBLE: 100,
   TRIPLE: 300,
   TETRIS: 1200,
+  SOFT_DROP: 1,
+  HARD_DROP: 2,
+  LINE_CLEAR: [40, 100, 300, 1200]
 };
